@@ -29,7 +29,6 @@ As seen in the examples from Van Gogh and Seurat, they use a technique that have
         </tr>
     </table>
 </div>
-<br>
 Links🔗
 + [Left Artwork](https://openprocessing.org/sketch/1620622)
 + [Right Artwork](https://openprocessing.org/sketch/156931)  
