@@ -29,8 +29,7 @@ As seen in the examples from Van Gogh and Seurat, they use a technique that have
         </tr>
     </table>
 </div>
-I explored how we can set a rule for a points' direction on the canvas and draw a line while these points move. I looked through several works that do this and they use functions such as map and use trigonometry. This would help me achieve the technique in part 1 because the works generated create a 'flow' or wave like artwork.
-
+I explored how we can set a rule for a points' direction on the canvas and draw a line while these points move. I looked through several works that do this and they use functions such as map and basic trigonometry. This would help me achieve the technique in part 1 because the works generated create a 'flow' or wave like artwork.  
 
 Links🔗
 + [Left Artwork](https://openprocessing.org/sketch/1620622)
