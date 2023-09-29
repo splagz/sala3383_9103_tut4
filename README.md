@@ -14,7 +14,7 @@ Major Assignment 🎨
         </tr>
     </table>
 </div>
-As seen in the examples from Van Gogh and Seurat, they use a technique that have tiny points or lines to form the bigger picture. The use of lines make it look like the artwork is flowing. This is the technique I want to use to portray Abad's 'Wheel of Fortune.' I think this technique would provide a unique twist to the artwork as the use of varying sizes of lines would allow me to add different visual effects. 
+As seen in the examples from Van Gogh and Seurat, they use a technique that have tiny points or lines to form the bigger picture. The use of lines make it look like the artwork is flowing. This is the technique I want to use to portray Abad's 'Wheel of Fortune.' I think this technique would provide a unique twist to the artwork as the use of varying directions would allow me to add different visual effects. 
 
 ## Coding Technique
 <div id="image-table">
