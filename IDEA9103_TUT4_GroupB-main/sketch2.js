@@ -12,10 +12,6 @@ stroke(2);
 amp= new p5.Amplitude();
 
 }
-//I want the following: 
-//Change Background Color (cream)
-//Create a rotating rectangle when the beat reaches a certain level 
-//Create more rectangles when the beat reaches a certain level 
 
 function draw() {
     background(255,253,220);
@@ -80,29 +76,46 @@ function draw() {
     drawBlueRect(0.708, 0.82, 0.096, 0.08)
 
 
-    //Red Rectangles
-    drawRedRect(0.34,0,0.072,0.12);
-    drawRedRect(0.148,0.148,0.036,0.136);
-    drawRedRect(0.56,0.124,0.144,0.032);
-    drawRedRect(0.484,0.18,0.052,0.14);
-    drawRedRect(0.856,0.216,0.008,0.032);
-    drawRedRect(0,0.388,0.088,0.048);
-    drawRedRect(0.624,0.34,0.068,0.064);
-    drawRedRect(0.282,0.544,0.168,0.04);
-    drawRedRect(0.12,0.622,0.076,0.148);
-    drawRedRect(0.64,0.552,0.076,0.092);
-    drawRedRect(0.8,0.6,0.104,0.052);
-    drawRedRect(0.252,0.832,0.172,0.056);
-    drawRedRect(0.476,0.7,0.024,0.108);
-    drawRedRect(0.616,0.74,0.02,0.072);
-    drawRedRect(0.252,0.832,0.172,0.056);
-    drawRedRect(0.824,0.856,0.172,0.032);
-
-    //rectangles width and height reacts to amplitude
+    //Red Rectangles that changes in size depending on audio 
     let vol= amp.getLevel();
-    let resize= map(vol,0,0.3,10,200);
-    rect(200,200,resize,resize);
-    rect(400,400,resize,resize);
+    let resize= map(vol,0,1,0,1);
+    let resize2= map(vol,0,1,0,0.2);
+
+    //Added the resize and resize2 into the width and length parameter of the red rect
+    drawRedRect(0.34,0,resize2,resize);
+    drawRedRect(0.148,0.148,resize,resize);
+    drawRedRect(0.56,0.124,resize,resize2);
+    drawRedRect(0.484,0.18,resize2,resize);
+    drawRedRect(0.856,0.216,resize,resize2);
+    drawRedRect(0,0.388,resize,resize2);
+    drawRedRect(0.624,0.34,resize2,resize);
+    drawRedRect(0.282,0.544,resize,resize2);
+    drawRedRect(0.12,0.622,resize2,resize);
+    drawRedRect(0.64,0.552,resize,resize2);
+    drawRedRect(0.8,0.6,resize2,resize);
+    drawRedRect(0.252,0.832,resize,resize2);
+    drawRedRect(0.476,0.7,resize,resize);
+    drawRedRect(0.616,0.74,resize,resize);
+    drawRedRect(0.252,0.832,resize2,resize2);
+    drawRedRect(0.824,0.856,resize,resize2);
+
+    //drawRedRect(0.34,0,0.072,0.12);
+    //drawRedRect(0.148,0.148,0.036,0.136);
+    //drawRedRect(0.56,0.124,0.144,0.032);
+    // drawRedRect(0.484,0.18,0.052,0.14);
+    // drawRedRect(0.856,0.216,0.008,0.032);
+    // drawRedRect(0,0.388,0.088,0.048);
+    // drawRedRect(0.624,0.34,0.068,0.064);
+    // drawRedRect(0.282,0.544,0.168,0.04);
+    // drawRedRect(0.12,0.622,0.076,0.148);
+    // drawRedRect(0.64,0.552,0.076,0.092);
+    // drawRedRect(0.8,0.6,0.104,0.052);
+    // drawRedRect(0.252,0.832,0.172,0.056);
+    // drawRedRect(0.476,0.7,0.024,0.108);
+    // drawRedRect(0.616,0.74,0.02,0.072);
+    // drawRedRect(0.252,0.832,0.172,0.056);
+    // drawRedRect(0.824,0.856,0.172,0.032);
+
 }
 
 //Defining a function to draw the yellow rectangles with size relative to the window size
