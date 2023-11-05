@@ -1,9 +1,11 @@
 let song;
 let amp;
+let moveX;
+let moveY;
 
 //Load up the sound 
 function preload() {
-    song = loadSound("audio/Bellaire - Paris City Jazz.mp3");
+    song = loadSound("audio/Albert Ammons - Boogie Woogie Stomp ｜ Piano transcription.mp3");
 }
 
 function setup() {
@@ -20,24 +22,28 @@ function draw() {
     let resize2 = map(vol, 0, 1, 0, 0.2);
     
      //if statement that changes the color of the rectangle
-     if (vol < 0.2) {
+     if (vol < 0.15) {
         background(255, 253, 220);
-    } else if (vol > 0.2) {
+        moveX = 0.1;
+        moveY= 0.3;
+    } else if (vol > 0.15) {
         background(200, 218, 184);
+        moveX=0;
+        moveY=0;
     }
 
     //Yellow rectangles
     drawYellowRect(0, 0, 0.072, 0.464);
-    drawYellowRect(0.124, 0.078, 0.208, 0.112);
-    drawYellowRect(0.127, 0.304, 0.16, 0.096);
+    drawYellowRect(0.124 + moveX, 0.078, 0.208, 0.112);
+    drawYellowRect(0.127 + moveX, 0.304, 0.16, 0.096);
     drawYellowRect(0, 0.612, 0.16, 0.176);
     drawYellowRect(0, 0.824, 0.328, 0.18);
     drawYellowRect(0.152, 0.716, 0.132, 0.008);
     drawYellowRect(0.184, 0.508, 0.172, 0.1);
-    drawYellowRect(0.388, 0.664, 0.112, 0.104);
-    drawYellowRect(0.42, 0.872, 0.056, 0.076);
-    drawYellowRect(0.424, 0.248, 0.296, 0.172);
-    drawYellowRect(0.528, 0.53, 0.016, 0.072);
+    drawYellowRect(0.388 + moveX, 0.664, 0.112, 0.104);
+    drawYellowRect(0.42 + moveX, 0.872, 0.056, 0.076);
+    drawYellowRect(0.424 + moveX, 0.248, 0.296, 0.172);
+    drawYellowRect(0.528 + moveX, 0.53, 0.016, 0.072);
     drawYellowRect(0.052, 0.028, 0.112, 0.028);
     drawYellowRect(0.656, 0.776, 0.108, 0.18);
     drawYellowRect(0.688, 0.014, 0.284, 0.148);
@@ -49,15 +55,15 @@ function draw() {
     drawYellowRect(0.1, 0.152, 0.148, 0.272);
     drawYellowRect(0.144, 0.504, 0.06, 0.052);
     drawYellowRect(0.152, 0.612, 0.132, 0.088);
-    drawYellowRect(0.168, 0.756, 0.086, 0.104);
+    drawYellowRect(0.168, 0.756, resize, 0.104);
     drawYellowRect(0.284, 0.154, 0.132, 0.136);
-    drawYellowRect(0.272, 0.273, 0.108, 0.064);
+    drawYellowRect(0.272, 0.273, 0.108, resize2);
     drawYellowRect(0.416, 0.304, 0.088, 0.152);
-    drawYellowRect(0.292, 0.476, 0.08, 0.096);
+    drawYellowRect(0.292, 0.476, resize, 0.096);
     drawYellowRect(0.428, 0.592, 0.016, 0.064);
     drawYellowRect(0.352, 0.696, 0.124, 0.212);
     drawYellowRect(0.484, 0.832, 0.104, 0.048);
-    drawYellowRect(0.54, 0.150, 0.388, 0.06);
+    drawYellowRect(0.54, 0.150, resize, 0.06);
     drawYellowRect(0.6, 0.256, 0.072, 0.128);
     drawYellowRect(0.768, 0.252, 0.092, 0.176);
     drawYellowRect(0.568, 0.5, 0.152, 0.256);
@@ -67,23 +73,23 @@ function draw() {
 
 
     //Blue rectangles
-    drawBlueRect(0.052, 0.032, 0.052, 0.388);
-    drawBlueRect(0.14, 0.1, 0.172, 0.068);
-    drawBlueRect(0.152, 0.328, 0.14, 0.048);
-    drawBlueRect(0.2, 0.528, 0.148, 0.076);
-    drawBlueRect(0.02, 0.6336, 0.128, 0.12);
-    drawBlueRect(0.168, 0.728, 0.092, 0.048);
-    drawBlueRect(0, 0.852, 0.312, 0.148);
-    drawBlueRect(0.492, 0.052, 0.088, 0.152);
-    drawBlueRect(0.412, 0.268, 0.268, 0.148);
-    drawBlueRect(0.484, 0.576, 0.016, 0.028);
-    drawBlueRect(0.408, 0.68, 0.08, 0.072);
-    drawBlueRect(0.436, 0.848, 0.036, 0.026);
-    drawBlueRect(0.736, 0.084, 0.052, 0.024);
-    drawBlueRect(0.68, 0.168, 0.284, 0.092);
-    drawBlueRect(0.792, 0.484, 0.64, 0.036);
-    drawBlueRect(.64, 0.568, 0.228, 0.104);
-    drawBlueRect(0.708, 0.82, 0.096, 0.08)
+    drawBlueRect(0.052, 0.032+ moveY, 0.052, 0.388);
+    drawBlueRect(0.14, 0.1+ moveY, 0.172, 0.068);
+    drawBlueRect(0.152, 0.328 + moveY, 0.14, 0.048);
+    drawBlueRect(0.2, 0.528 + moveY, 0.148, 0.076);
+    drawBlueRect(0.02, 0.6336 + moveY, 0.128, 0.12);
+    drawBlueRect(0.168, 0.728 + moveY, 0.092, 0.048);
+    drawBlueRect(0, 0.852 + moveY, 0.312, 0.148);
+    drawBlueRect(0.492, 0.052 + moveY, 0.088, 0.152);
+    drawBlueRect(0.412, 0.268 + moveY, 0.268, 0.148);
+    drawBlueRect(0.484, 0.576 + moveY, 0.016, 0.028);
+    drawBlueRect(0.408, 0.68 + moveY, 0.08, 0.072);
+    drawBlueRect(0.436, 0.848 + moveY, 0.036, 0.026);
+    drawBlueRect(0.736, 0.084 + moveY, 0.052, 0.024);
+    drawBlueRect(0.68, 0.168 + moveY, 0.284, 0.092);
+    drawBlueRect(0.792, 0.484 + moveY, 0.64, 0.036);
+    drawBlueRect(.64, 0.568 + moveY, 0.228, 0.104);
+    drawBlueRect(0.708, 0.82 + moveY, 0.096, 0.08)
 
     //Added the resize and resize2 into the width and length parameter of the red rect
     drawRedRect(0.34, 0, resize2, resize);
