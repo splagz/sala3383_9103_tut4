@@ -1,5 +1,5 @@
 let song;
-let fft;
+let amp;
 
 //Load up the sound 
 function preload(){
@@ -8,9 +8,8 @@ function preload(){
 
 function setup() {
 createCanvas(windowWidth, windowHeight); //Creating the canvas to the size of the window
-noLoop(); //Stopping the draw function so the rectangles are static - reference p5.js website
-noStroke();
-fft= new p5.FFT();
+stroke(2);
+amp= new p5.Amplitude();
 
 }
 //I want the following: 
@@ -98,6 +97,12 @@ function draw() {
     drawRedRect(0.616,0.74,0.02,0.072);
     drawRedRect(0.252,0.832,0.172,0.056);
     drawRedRect(0.824,0.856,0.172,0.032);
+
+    //rectangles width and height reacts to amplitude
+    let vol= amp.getLevel();
+    let resize= map(vol,0,0.3,10,200);
+    rect(200,200,resize,resize);
+    rect(400,400,resize,resize);
 }
 
 //Defining a function to draw the yellow rectangles with size relative to the window size
