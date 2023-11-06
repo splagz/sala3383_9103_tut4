@@ -2,8 +2,6 @@ let song;
 let amp;
 let moveX;
 let moveY;
-let x = 0;
-let direction = "right";
 
 //Load up the sound 
 function preload() {
@@ -13,7 +11,6 @@ function preload() {
 function setup() {
     createCanvas(windowWidth, windowHeight); //Creating the canvas to the size of the window
     amp = new p5.Amplitude();
-    angleMode(DEGREES);
     strokeWeight(3);
 
 }
@@ -112,7 +109,6 @@ function draw() {
     drawRedRect(0.616, 0.74, resize, resize);
     drawRedRect(0.252, 0.832, resize2, resize2);
     drawRedRect(0.824, 0.856, resize, resize2);
-
 }
 
 //Defining a function to draw the yellow rectangles with size relative to the window size
