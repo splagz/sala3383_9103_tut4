@@ -33,13 +33,13 @@ function draw() {
     }
 
 
-    //Yellow rectangles
+    //Pink rectangles
     drawPinkRect(0, 0, 0.072, 0.464);
     drawPinkRect(0.124 + moveX, 0.078, 0.208, 0.112);
     drawPinkRect(0.127 + moveX, 0.304, 0.16, 0.096);
     drawPinkRect(0 + moveX, 0.612, 0.16, 0.176);
     drawPinkRect(0, 0.824 + moveY, 0.328, 0.18);
-    drawPinkRect(0.152, 0.716, 0.132, 0.008);
+    drawPinkRect(0.152, 0.716 +moveY, 0.132, 0.008);
     drawPinkRect(0.184 + moveX, 0.508, 0.172, 0.1);
     drawPinkRect(0.388 + moveX, 0.664, 0.112, 0.104);
     drawPinkRect(0.42 + moveX, 0.872, 0.056, 0.076);
@@ -49,16 +49,16 @@ function draw() {
     drawPinkRect(0.656 + moveX, 0.776, 0.108, 0.18);
     drawPinkRect(0.688 + moveX, 0.014, 0.284, 0.148);
     drawPinkRect(0.728 + moveX, 0.808, 0.128, 0.104);
-    drawPinkRect(0.768, 0.108, 0.06, 0.048);
-    drawPinkRect(0.082, 0.408, 0.048, 0.128);
+    drawPinkRect(0.768, 0.108+moveY, 0.06, 0.048);
+    drawPinkRect(0.082, 0.408+moveY, 0.048, 0.128);
 
-    //More yellow rectangles
-    drawYellowRect(0.1, 0.152, 0.148, 0.272);
+    //Yellow rectangles
+    drawYellowRect(0.1, 0.152, resize, 0.272);
     drawYellowRect(0.144, 0.504, 0.06, 0.052);
     drawYellowRect(0.152, 0.612, 0.132, 0.088);
     drawYellowRect(0.168, 0.756, resize, 0.104);
     drawYellowRect(0.284, 0.154, 0.132, 0.136);
-    drawYellowRect(0.272, 0.273, 0.108, resize2);
+    drawYellowRect(0.272+moveX, 0.273, 0.108, resize2);
     drawYellowRect(0.416, 0.304, 0.088, 0.152);
     drawYellowRect(0.292, 0.476, resize, 0.096);
     drawYellowRect(0.428 + moveX, 0.592, 0.016, 0.064);
@@ -69,8 +69,8 @@ function draw() {
     drawYellowRect(0.768, 0.252 + moveY, 0.092, 0.176);
     drawYellowRect(0.568 + moveX, 0.5, 0.152, 0.256);
     drawYellowRect(0.736, 0.584, 0.16, 0.092);
-    drawYellowRect(0.68, 0.72, 0.128, 0.26);
-    drawYellowRect(0.824, 0.788, 0.048, 0.06);
+    drawYellowRect(0.68, 0.72, resize, 0.26);
+    drawYellowRect(0.824, 0.788, 0.048, resize2);
 
 
     //Blue rectangles
